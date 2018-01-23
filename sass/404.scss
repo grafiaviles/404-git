@@ -72,19 +72,21 @@ body {
                     border-radius: 50%;
                     border: 10px solid #DDBF3E;
                     box-shadow: 0 20px 40px -10px rgba(0,0,0,.15);
-                    opacity: 0;
                     @media screen and (max-width:$break-medium) {
                         max-width: 100px;
                         border-width: 7px;
                     }
                 }
                 & .smile-1 {
+                    opacity: 0;
                     animation: smile-1 1.5s 1s infinite alternate;
                 }
                 & .smile-2 {
+                    opacity: 0;
                     animation: smile-2 1.5s 2s infinite alternate;
                 }
                 & .smile-3 {
+                    opacity: 0;
                     animation: smile-3 1.5s 3s infinite alternate;
                 }
                 @keyframes smile-1 {
