@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+.container-404 {
+    background: $smileColor;
+    width: $width!important;
+    min-height: $height!important;
+    box-sizing: border-box!important;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font!important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @media screen and (max-width:$break-medium) {
+        padding: 0 1.5rem;
+    }
+    & .content-404 {
+        width: 100%!important;
+        min-height: 90vh!important;
+        box-sizing: border-box!important;
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0 10px 50px -10px rgba(0,0,0,.2);
+        background-image: url(../img/rounded-bg.png);
+        background-repeat: no-repeat;
+        background-position: center 40%;
+        text-align: center;
+        & .logotipo {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        & .error {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: $width;
+            max-width: $break-medium;
+            position: relative;
+            margin-bottom: 1rem;
+            @media screen and (max-width:$break-medium) {
+             justify-content: center;
+            }
+            & .number {
+                position: relative;
+                font-family: $font;
+                font-weight: 700;
+                font-size: 10rem;
+                margin: 0;
+                color: $black;
+                @media screen and (max-width:$break-medium) {
+                    font-size: 7rem;
+                }
+            }
+            & .box-smile {
+                position: relative;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                max-width: 180px;
+                z-index: 10;
+                & .smile {
+                    position: absolute;
+                    max-width: 180px;
+                    border-radius: 50%;
+                    border: 10px solid #DDBF3E;
+                    box-shadow: 0 20px 40px -10px rgba(0,0,0,.15);
+                    opacity: 0;
+                    @media screen and (max-width:$break-medium) {
+                        max-width: 100px;
+                        border-width: 7px;
+                    }
+                }
+                & .smile-1 {
+                    animation: smile-1 1.5s 1s infinite alternate;
+                }
+                & .smile-2 {
+                    animation: smile-2 1.5s 2s infinite alternate;
+                }
+                & .smile-3 {
+                    animation: smile-3 1.5s 3s infinite alternate;
+                }
+                @keyframes smile-1 {
+                    0% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                    100% {
+                        transform: scale(.2);
+                    }
+                    
+                }
+                @keyframes smile-2 {
+                    0% {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(.2);
+                    }
+                }
+                @keyframes smile-3 {
+                    0% {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(.2);
+                    }      
+                }
+            }
+        }
+        & .text-error {
+            color: $black;
+            font-family: $font;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            width: 80%;
+            font-size: 15px;
+            
+        }
+        & .smile-btn {
+            background: $polarColor;
+            color: $white;
+            font-size: 1rem;        
+            padding: 0 1.5rem;
+            line-height: 50px;
+            border-radius: 25px;
+            text-decoration: none;
+            outline: none;
+            font-weight: 700;
+            transition: $transition1;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,.2);
+        }
+        & .smile-btn:hover, & .smile-btn:active {
+            box-shadow: 0 20px 0px -10px rgba(0,0,0,.15);
+            transform: scale(.90);
+        }
+        
+    }
+
+}
